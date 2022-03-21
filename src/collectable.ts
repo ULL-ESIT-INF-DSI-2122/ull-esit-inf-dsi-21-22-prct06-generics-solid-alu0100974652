@@ -53,3 +53,18 @@ export class Collectable<T> implements CollectableInterface<T>
         this.items.splice(index, 1);
     }
 }
+
+interface PrintableInterface<T>
+{
+    print(): string;
+}
+
+export class Printable<T> implements PrintableInterface<T>
+{
+    constructor(private items: T[]) {};
+
+    print():string 
+    {
+        return this.items.join(',');        
+    }
+}

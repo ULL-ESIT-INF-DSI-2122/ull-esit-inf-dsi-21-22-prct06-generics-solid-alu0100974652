@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import { Collectable } from '../src/collectable';
+import { Collectable, Printable } from '../src/collectable';
 
 describe('Pruebas para la interfaz generica collectable', () => {
 
@@ -22,6 +22,12 @@ describe('Pruebas para la interfaz generica collectable', () => {
     it('Se implementa el método removeItems', () => {
         myCollection.removeItem(3);
         expect(myCollection.getNumberOfItems()).to.be.eq(3);
+    });
+
+    const printCollect = new Printable<number>([3, 5, 7]);
+
+    it('Se implementa el método print', () => {
+        expect(printCollect.print()).to.be.eq('3,5,7');
     });
 
 });
