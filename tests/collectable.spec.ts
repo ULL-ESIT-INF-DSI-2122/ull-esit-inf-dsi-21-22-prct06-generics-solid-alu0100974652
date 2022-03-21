@@ -36,4 +36,22 @@ describe('Pruebas para la interfaz generica collectable', () => {
         expect(numericPrintableCollectionPruebas.print()).to.be.eq('3,5,7');
     });
 
+    it('Se implementa el método getITem', () => {
+        expect(numericPrintableCollectionPruebas.getItem(0)).to.be.eq(3);
+    });
+
+    it('Se implementa el addItem', () => {
+        numericPrintableCollectionPruebas.addItem(8);
+        expect(numericPrintableCollectionPruebas.getItem(3)).to.be.eq(8);
+    });
+
+    it('Se implementa el método getNumberOfItems', () => {
+        expect(numericPrintableCollectionPruebas.getNumberOfItems()).to.be.eq(4);
+    });
+
+    it('Se implementa el método removeItems', () => {
+        numericPrintableCollectionPruebas.removeItem(3);
+        expect(numericPrintableCollectionPruebas.getNumberOfItems()).to.be.eq(3);
+    });
+
 });
