@@ -5,7 +5,7 @@ interface CollectableInterface<T>
 {
     addItem(newItem: T): void;
     getItem(index: number): T;
-    //removeItem(index: number): T;
+    removeItem(index: number): void;
     getNumberOfItems(): number;
 }
 
@@ -37,8 +37,19 @@ export class Collectable<T> implements CollectableInterface<T>
         return this.items[index];
     }
 
+    /**
+     * GetNumberOfItems
+     * @returns devuelve el tamaño del vector items
+     */
     getNumberOfItems(): number {
         return this.items.length;
     }
 
+    /**
+     * RemoveItem
+     * @param index indice para saber que posición eliminar
+     */
+    removeItem(index: number): void {
+        this.items.splice(index, 1);
+    }
 }

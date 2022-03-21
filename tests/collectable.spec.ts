@@ -19,4 +19,9 @@ describe('Pruebas para la interfaz generica collectable', () => {
         expect(myCollection.getNumberOfItems()).to.be.eq(4);
     });
 
+    it('Se implementa el método removeItems', () => {
+        myCollection.removeItem(3);
+        expect(myCollection.getNumberOfItems()).to.be.eq(3);
+    });
+
 });
