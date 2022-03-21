@@ -64,6 +64,10 @@ interface PrintableInterface<T>
     print(): string;
 }
 
+
+/**
+ * @class Printable para imprimir cualquier tipo de dato
+ */
 export class Printable<T> implements PrintableInterface<T>
 {
     /**
@@ -82,6 +86,10 @@ export class Printable<T> implements PrintableInterface<T>
     }
 }
 
+
+/**
+ * @class Clase abstracta PrintableCollection con los métodos de las otras interfaces genericas
+ */
 export abstract class PrintableCollection<T>
 {
    /**
@@ -130,4 +138,26 @@ export abstract class PrintableCollection<T>
     {
         return this.items.join(',');        
     }
+}
+
+export class NumericPrintableCollection<T> extends PrintableCollection<T>
+{
+    /**
+     * Constructor de la clase heredada
+     * @param items Arrays de cualquier tipo de la clase heredada
+     */
+    constructor(items: T[]) 
+    {
+        super(items);
+    }
+
+    /**
+     * Print
+     * @returns devuelve un string con el array formateado
+     */
+    print():string 
+    {
+        return this.items.join(',');        
+    }
+
 }

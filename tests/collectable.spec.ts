@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import { Collectable, Printable } from '../src/collectable';
+import { Collectable, NumericPrintableCollection, Printable, PrintableCollection } from '../src/collectable';
 
 describe('Pruebas para la interfaz generica collectable', () => {
 
@@ -28,6 +28,12 @@ describe('Pruebas para la interfaz generica collectable', () => {
 
     it('Se implementa el método print', () => {
         expect(printCollect.print()).to.be.eq('3,5,7');
+    });
+
+    const numericPrintableCollectionPruebas = new NumericPrintableCollection<number>([3, 5, 7]);
+
+    it('Se implementa el método print', () => {
+        expect(numericPrintableCollectionPruebas.print()).to.be.eq('3,5,7');
     });
 
 });
