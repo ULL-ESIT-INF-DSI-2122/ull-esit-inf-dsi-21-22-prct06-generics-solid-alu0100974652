@@ -1,5 +1,6 @@
 /**
  * Interfaz generica
+ * @interface CollectableInterface interfaz generica de collectable
  */
 interface CollectableInterface<T>
 {
@@ -54,6 +55,10 @@ export class Collectable<T> implements CollectableInterface<T>
     }
 }
 
+/**
+ * Interfaz Genérica para print
+ * @interface PrintableInterface interfaz generica de Printable
+ */
 interface PrintableInterface<T>
 {
     print(): string;
@@ -61,8 +66,16 @@ interface PrintableInterface<T>
 
 export class Printable<T> implements PrintableInterface<T>
 {
+    /**
+     * Constructor
+     * @param items Arrays de cualquier tipo de dato
+     */
     constructor(private items: T[]) {};
 
+    /**
+     * Print
+     * @returns devuelve un string con el array formateado
+     */
     print():string 
     {
         return this.items.join(',');        
