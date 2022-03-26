@@ -77,15 +77,15 @@ export class Cifrado
         let claveRepe: string = this.claveRepetida();
         let mensajeSinCodificar: string = this.mensaje.getAlfabeto();
         let mensajeCodificado: string = '';
-        let modulo: number = 0;
+        let posicionLetra: number = 0;
 
         for(let i: number = 0; i < mensajeSinCodificar.length; i++)
         {
             let indexMensajeSinCodificar: number = this.alfabet.getAlfabeto().indexOf(mensajeSinCodificar[i]);
             let indexClaveRepetida: number = this.alfabet.getAlfabeto().indexOf(claveRepe[i]);
-            modulo = (indexMensajeSinCodificar + indexClaveRepetida + 1) % this.alfabet.getTamanio();
+            posicionLetra = (indexMensajeSinCodificar + indexClaveRepetida + 1) % this.alfabet.getTamanio();
 
-            mensajeCodificado = mensajeCodificado + this.alfabet.getAlfabeto().charAt(modulo);
+            mensajeCodificado = mensajeCodificado + this.alfabet.getAlfabeto().charAt(posicionLetra);
         }
         return mensajeCodificado;
     }
