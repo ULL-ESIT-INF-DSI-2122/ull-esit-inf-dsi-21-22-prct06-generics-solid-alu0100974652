@@ -9,4 +9,9 @@ describe('Pruebas para la clase Alfabeto', () => {
         expect(defAlfabeto.getAlfabeto()).to.eq('ABCDEFGHIJKLMNÑOPQRSTUVWXYZ')
     });
 
+    it('Se puede cambiar el alfabeto', () => {
+        defAlfabeto.setAlfabeto('aabbcc');
+        expect(defAlfabeto.getAlfabeto()).to.eq('aabbcc');
+    });
+
 });
