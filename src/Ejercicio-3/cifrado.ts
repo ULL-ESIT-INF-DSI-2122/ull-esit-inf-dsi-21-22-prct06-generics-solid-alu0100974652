@@ -39,4 +39,25 @@ export class Cifrado
 
         return claveRepetidaString;
     }
+
+    codificarMensaje()
+    {
+        let claveRepe: string = this.claveRepetida(this.clave.getAlfabeto(), this.mensaje.getAlfabeto());
+        let mensajeSinCodificar: string = this.mensaje.getAlfabeto();
+        let mensajeCodificado: string = '';
+        let modulo: number = 0;
+
+
+        for(let i: number = 0; i < mensajeSinCodificar.length; i++)
+        {
+            let indexMensajeSinCodificar: number = this.alfabet.getAlfabeto().indexOf(mensajeSinCodificar[i]);
+            let indexClaveRepetida: number = this.alfabet.getAlfabeto().indexOf(claveRepe[i]);
+            modulo = (indexMensajeSinCodificar + indexClaveRepetida + 1) % this.alfabet.getTamanio();
+
+            mensajeCodificado = mensajeCodificado + this.alfabet.getAlfabeto().charAt(modulo);
+
+        }
+
+        return mensajeCodificado;
+    }
 }

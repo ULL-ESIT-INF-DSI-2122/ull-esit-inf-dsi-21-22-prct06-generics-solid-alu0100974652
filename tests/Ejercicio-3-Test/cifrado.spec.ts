@@ -29,4 +29,8 @@ describe('Pruebas para la clase Cifrado', () => {
         expect(defCifrado.claveRepetida('CLAVE', 'HOLAESTOESUNAPRUEBA')).to.eq('CLAVECLAVECLAVECLAV');
     });
 
+    it('Se codifica el mensaje "HOLAESTOESUNAPRUEBA" con la clave "CLAVE"', () => {
+        expect(defCifrado.codificarMensaje()).to.eq('KAMWJVFPAXXYBMWXPCW');
+    });
+
 });
