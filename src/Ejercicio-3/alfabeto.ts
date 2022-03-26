@@ -31,4 +31,13 @@ export class Alfabeto
     {
         this.alph = nuevoAlfabeto;
     }
+    
+    /**
+     * GetTamanio
+     * @returns Devuelve el tamaño del alfabeto
+     */
+    getTamanio()
+    {
+        return this.alph.length;
+    }
 }
