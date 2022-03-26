@@ -6,7 +6,7 @@
     "test": "mocha ./tests",
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
     "doc": "typedoc",
-    "coverage": "nyc npm test && nyc report --report=text-lcov | coveralls && rm -rf .nyc_output"
+    "coverage": "nyc npm test || NODE_ENV=test nyc report --report=text-lcov | coveralls && rm -rf .nyc_output"
   },
   "keywords": [],
   "author": "",

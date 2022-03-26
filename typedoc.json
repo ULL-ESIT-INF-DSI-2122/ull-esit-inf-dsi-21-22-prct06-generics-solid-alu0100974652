@@ -1,7 +1,7 @@
 {
     "entryPoints": [
 
-      "./src/collectable.ts"
+      "./src/Ejercicio-PE/collectable.ts"
 
     ],
     "out": "./docs"
