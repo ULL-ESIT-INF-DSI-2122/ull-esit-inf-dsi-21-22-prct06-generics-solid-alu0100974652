@@ -28,7 +28,7 @@ export class Cifrado
     {
         let iterator: number = 0;
         let claveRepetidaString: string = '';
-        while(mensaje.length != claveARepetir.length)
+        while(mensaje.length != claveRepetidaString.length)
         {
             claveRepetidaString = claveRepetidaString + claveARepetir[iterator];
             iterator++;

@@ -25,5 +25,8 @@ describe('Pruebas para la clase Cifrado', () => {
         expect(defCifrado.getMensaje().getAlfabeto()).to.eq('HOLAESTOESUNAPRUEBA');
     });
 
+    it('Método que repite la palabra Clave hasta igualar el tamaño de del mensaje original: Clave - "CLAVE" Mensaje - "HOLAESTOESUNAPRUEBA" = "CLAVECLAVECLAVECLAV"', () => {
+        expect(defCifrado.claveRepetida('CLAVE', 'HOLAESTOESUNAPRUEBA')).to.eq('CLAVECLAVECLAVECLAV');
+    });
 
 });
