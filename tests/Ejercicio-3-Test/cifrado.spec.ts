@@ -33,4 +33,9 @@ describe('Pruebas para la clase Cifrado', () => {
         expect(defCifrado.codificarMensaje()).to.eq('KAMWJVFPAXXYBMWXPCW');
     });
 
+    it('Se decodifica el mensaje "KAMWJVFPAXXYBMWXPCW" con la clave "CLAVE"', () => {
+        defCifrado.getMensaje().setAlfabeto('KAMWJVFPAXXYBMWXPCW');
+        expect(defCifrado.descifrarMensaje()).to.eq('HOLAESTOESUNAPRUEBA');
+    });
+
 });

@@ -60,4 +60,26 @@ export class Cifrado
 
         return mensajeCodificado;
     }
+
+
+    descifrarMensaje()
+    {
+        let claveRepe: string = this.claveRepetida(this.clave.getAlfabeto(), this.mensaje.getAlfabeto());
+        let mensajeCodificado: string = this.mensaje.getAlfabeto();
+        let mensajeDecodificado: string = '';
+        let modulo: number = 0;
+
+
+        for(let i: number = 0; i < mensajeCodificado.length; i++)
+        {
+            let indexMensajeCodificado: number = this.alfabet.getAlfabeto().indexOf(mensajeCodificado[i]);
+            let indexClaveRepetida: number = this.alfabet.getAlfabeto().indexOf(claveRepe[i]);
+            modulo = (indexMensajeCodificado + this.alfabet.getTamanio() - indexClaveRepetida - 1) % this.alfabet.getTamanio();
+
+            mensajeDecodificado = mensajeDecodificado + this.alfabet.getAlfabeto().charAt(modulo);
+
+        }
+
+        return mensajeDecodificado;
+    }
 }
