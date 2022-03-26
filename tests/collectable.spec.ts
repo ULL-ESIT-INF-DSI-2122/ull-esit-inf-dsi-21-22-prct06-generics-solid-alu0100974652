@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import { Collectable, NumericPrintableCollection, Printable, PrintableCollection } from '../src/collectable';
+import { Collectable, NumericPrintableCollection, Printable, PrintableCollection } from '../src/Ejercicio-PE/collectable';
 
 describe('Pruebas para la interfaz generica collectable', () => {
 
