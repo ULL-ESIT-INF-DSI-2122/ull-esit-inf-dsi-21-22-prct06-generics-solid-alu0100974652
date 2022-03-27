@@ -16,6 +16,10 @@ describe('Pruebas para la Colección de películas', () => {
         expect(misPeliculas.searchByName("Premonicion")).to.deep.eq([premonicion]);
     });
 
+    it('Se pueden utilizar el método getItem de la clase BasicStreamableCollection', () => {
+        expect(misPeliculas.getItem(1)).to.deep.eq(elProyectoAdam);
+    });
+
 
 
 });
