@@ -3,7 +3,10 @@
 
       "./src/Ejercicio-PE/collectable.ts",
       "./src/Ejercicio-3/alfabeto.ts",
-      "./src/Ejercicio-3/cifrado.ts"
+      "./src/Ejercicio-3/cifrado.ts",
+      "./src/Ejercicio-2/basicStreamableColl.ts",
+      "./src/Ejercicio-2/streamable.ts",
+      "./src/Ejercicio-2/peliculas.ts"
 
     ],
     "out": "./docs"
