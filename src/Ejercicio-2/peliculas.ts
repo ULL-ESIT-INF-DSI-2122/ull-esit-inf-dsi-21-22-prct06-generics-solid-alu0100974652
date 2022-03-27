@@ -10,5 +10,5 @@ export class Peliculas extends BasicStreamableCollection<Pelicula>
     constructor(protected listaPeliculas: Pelicula[]) 
     {
         super(listaPeliculas);
-    }
+    }   
 }

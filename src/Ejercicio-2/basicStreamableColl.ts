@@ -79,6 +79,12 @@ export abstract class BasicStreamableCollection<T extends {name: string, year: n
      * @returns retorna el array formateado para su lectura
      */
     print(): string {
-        return this.items.join(',');
+        let stringFormateado = ''
+        for(let item of this.items)
+        {
+            stringFormateado = stringFormateado + item.name + ', ';
+        }
+
+        return stringFormateado;
     }
 }

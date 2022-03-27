@@ -35,6 +35,10 @@ describe('Pruebas para la Colección de películas heredada de BasicStreamableCo
         expect(misPeliculas.searchByCategory("Accion")).to.deep.eq([batman]);
     });
 
+    it('Se modifica el método print de la clase BasicStreamableCollection', () => {
+        expect(misPeliculas.print()).to.deep.eq('Batman, El proyecto Adam, ');
+        
+    });
 
 
 });
