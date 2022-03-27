@@ -24,6 +24,11 @@ describe('Pruebas para la Colección de películas', () => {
         expect(misPeliculas.getNumberOfItems()).to.deep.eq(3);
     });
 
+    it('Se pueden utilizar el método removeItem de la clase BasicStreamableCollection', () => {
+        misPeliculas.removeItem("Premonicion");
+        expect(misPeliculas.searchByName("Premonicion")).to.deep.eq([]);
+    });
+
 
 
 });
