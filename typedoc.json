@@ -1,7 +1,9 @@
 {
     "entryPoints": [
 
-      "./src/Ejercicio-PE/collectable.ts"
+      "./src/Ejercicio-PE/collectable.ts",
+      "./src/Ejercicio-3/alfabeto.ts",
+      "./src/Ejercicio-3/cifrado.ts"
 
     ],
     "out": "./docs"

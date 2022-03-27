@@ -4,3 +4,5 @@ package-lock.json
 .eslintrc.json
 .mocharc.json
 .nyc_output
+.gitignore
+.coveralls.yml
