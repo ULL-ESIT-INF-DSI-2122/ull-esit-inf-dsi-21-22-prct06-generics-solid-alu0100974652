@@ -20,6 +20,10 @@ describe('Pruebas para la Colección de películas', () => {
         expect(misPeliculas.getItem(1)).to.deep.eq(elProyectoAdam);
     });
 
+    it('Se pueden utilizar el método getNumberOfItems de la clase BasicStreamableCollection', () => {
+        expect(misPeliculas.getNumberOfItems()).to.deep.eq(3);
+    });
+
 
 
 });
